@@ -12,7 +12,7 @@ class AboutUs extends React.Component {
                         <div className="heading">About Us: MindLearn</div>
                         <div className="heading">-Your One-Stop Solution</div>
                         <div className="mainContents">
-                            At MindLearn, we understand the challenges students face in the preparing for NEET. 
+                            At  MindLearn, we understand the challenges students face in the preparing for NEET. 
                             Whether you are in 12<sup>th</sup> standard or a repeat candidate, our platform covers everything 
                             from counseling session, college shortlisting, and exam preparation to recruitmant and placement support.
                         </div>
