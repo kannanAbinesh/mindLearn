@@ -1,0 +1,37 @@
+.RegisterMainContainer {
+    text-align: center;
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+
+    /* background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-color: rgba(255, 255, 255, 0.5);  */
+
+}
+
+.buttonContainer {
+    background-color: #FFC300;
+    width: auto;
+    font-size: 25px;
+    border: none;
+    font-weight: bold;
+    height: 43px;
+    margin-top: 30px;
+}
+
+.registerHeader {
+    margin-top: 10px;
+    color: #ffff;
+}
+
+.buttonContainerTwo {
+    background-color: white;
+    width: auto;
+    font-size: 15px;
+    border: none;
+    height: 30px;
+    margin-bottom: 30px;
+}

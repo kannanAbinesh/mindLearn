@@ -1,0 +1,16 @@
+.mainContainerFooter {
+    background-color: #000000;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.content {
+    margin: 0px;
+    padding: 10px;
+}
+
+@media all and (max-width: 700px) {
+    .content {
+        
+    }
+}

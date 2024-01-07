@@ -1,0 +1,35 @@
+.facultySubClass {
+    text-align: center;
+    margin: 10px;
+}
+
+.facultySubClass h2 {
+    margin: 0;
+}
+
+.dataFlex {
+    display: flex;
+    margin: 5%;
+    gap: 10%
+}
+
+.flex {
+    margin-top: 70px;
+}
+
+.nameHeader {
+    color: #FFC300;
+}
+
+.data {
+    font-weight: bold;
+}
+
+.facultyButton {
+    margin-top: 10px;
+    background-color: #FFC300;
+    border: none;
+    height: 12%;
+    width: auto;
+    color: white;
+}

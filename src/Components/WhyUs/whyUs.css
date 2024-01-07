@@ -1,0 +1,19 @@
+.dataDisplay div {
+    margin-top: 10px;
+}
+
+.bottomUl li {
+    margin-top: 3px;
+}
+
+#moreOne {
+    display: none;
+}
+
+#readLess {
+    display: none;
+}
+
+#moreTwo {
+    display: none;
+}

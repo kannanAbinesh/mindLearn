@@ -1,0 +1,49 @@
+.imageContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+.bannerContainer {
+    width: 50%;
+    padding: 100px;
+}
+
+.bannerHeading {
+    color: #FFC300;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: serif;
+}
+
+.contentOne {
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 40px;
+}
+
+.contentTwo {
+    font-size: 35px;
+    padding-top: 15px;
+}
+
+.contentTwo span {
+    font-weight: bold;
+    font-size: 45px;
+    font-family: 'fangsong';
+}
+
+.mainContent {
+    font-size: 20px;
+    padding: 20px 20% 0 0;
+    height: 100%;
+}
+
+@media all and (max-width: '700px') {
+    .mainContent {
+
+    }
+}
