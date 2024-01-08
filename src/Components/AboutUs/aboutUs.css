@@ -7,9 +7,8 @@
 .firstContainer {
     width: 50%;
     height: auto;
-    align-items: center;
     margin: auto;
-    padding: 50px 10px 50px 50px ;
+    display: block;
 }
 
 .heading {
@@ -18,7 +17,7 @@
 }
 
 .mainContents {
-    padding: 25px 100px 0 0;
+    padding-top: 25px;
     font-size: 18px;
 }
 
@@ -28,4 +27,43 @@
 
 .imageContainers {
     width: 80%;
+    margin: 0 0 0 50px;
+}
+
+.innnerImageContainers {
+    /* display: none; */
+}
+
+@media all and (max-width: 1100px) {
+    .heading {
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .mainContents {
+        padding-top: 15px;
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .heading {
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .mainContents {
+        font-size: 10px;
+        padding-top: 10px;
+    }
+}
+
+@media all and (max-width: 580px) {
+    .imageContainers {
+        display: none;
+    }
+
+    .mainContainer {
+        display: block;
+    }
 }
