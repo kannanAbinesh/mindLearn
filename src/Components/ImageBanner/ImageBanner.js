@@ -4,7 +4,7 @@ import './ImageBanner.css'
 class ImageBanner extends React.Component {
     render() {
         return (
-            <div id='#imageBanner_view' className='imageContainer'>
+            <div className='imageContainer'>
                 <div className='bannerContainer'>
                     <div className='bannerHeading'>
                         <div>NEET Crash Course by MindLearn:</div>
