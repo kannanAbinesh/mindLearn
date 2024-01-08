@@ -50,8 +50,8 @@
     }
 
     .bannerContainer {
-        padding: 50px;
-        width: 100%;
+        padding: 15px 0 15px 15px;
+        width: 95%;
     }
 
     .bannerHeading {
