@@ -1,5 +1,6 @@
 import React from "react";
-import { FaCube } from "react-icons/fa";
+import { MdOutlineCancel } from "react-icons/md";
+import { IoMdMenu } from "react-icons/io";
 
 /* images */
 import logo from '../../Images/logo.png';
@@ -35,16 +36,15 @@ class NavBar extends React.Component {
                         {
                             !isOpen 
                             ? 
-                            <FaCube 
+                            <IoMdMenu 
                             className="menuIcon" 
                             onClick={() => this.setState({isOpen: true})}
                             />
                             : 
-                            <div 
-                            className="menuIcon" 
-                            style={{fontSize: '35px', fontWeight: 'bold'}}
+                            <MdOutlineCancel 
+                            className="menuIcon"
                             onClick={() => this.setState({isOpen: false})}
-                            >X</div>
+                            />
                         }
                     </div>
                 </nav>

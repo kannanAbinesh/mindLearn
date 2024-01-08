@@ -20,8 +20,7 @@
 }
 
 .logo {
-    margin: 0 0 0 50px;
-    width: 75px;
+    width: 30%;
 }
 
 .link {
@@ -47,7 +46,7 @@
     }
 
     .logo {
-        margin: -10px 0 0 50px;
+        width: 90%;
     }
 
     .navContent {
@@ -63,9 +62,8 @@
 
     .mobileMenu {
         float: right;
-        /* left: 8%; */
         width: 30%;
-        background-color: #83DA75;
+        background-color: #FFFFFF;
         display: block;
         margin: 25px 25px 0 0;
         font-weight: bold;

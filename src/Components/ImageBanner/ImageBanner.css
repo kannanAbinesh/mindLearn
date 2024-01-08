@@ -1,4 +1,5 @@
 .imageContainer {
+    background-image: url('../../Images/banner.png');
     width: 100%;
     height: auto;
     margin-top: 10px;
@@ -42,8 +43,32 @@
     height: 100%;
 }
 
-@media all and (max-width: '700px') {
-    .mainContent {
+@media all and (max-width: 1125px) {
+    .imageContainer {
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('../../Images/homeBannerResolution.webp');
+    }
 
+    .bannerContainer {
+        padding: 50px;
+        width: 100%;
+    }
+
+    .bannerHeading {
+        color: #FFC300;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: serif;
+    }
+
+    .contentOne {
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 30px;
+    }
+
+    .mainContent {
+        overflow-x:hidden;
+        overflow-y:auto;
     }
 }
