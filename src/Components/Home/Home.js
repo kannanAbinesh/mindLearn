@@ -15,12 +15,12 @@ class Home extends React.Component {
             <div>
                 <NavBar />
                 <ImageBanner />
-                {/* <AboutUs />
+                <AboutUs />
                 <WhyUs />
                 <Faculty />
                 <Register />
                 <Contact />
-                <Footer /> */}
+                <Footer />
             </div>
         )
     }
