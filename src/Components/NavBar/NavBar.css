@@ -56,13 +56,14 @@
     
     .menuIcon {
         display: block;
-        margin: 30px 25px 0 0;
+        margin: 0 20px 0 0;
         width: 40px;
         height: 40px;
     }
 
     .mobileMenu {
         float: right;
+        /* left: 8%; */
         width: 30%;
         background-color: #83DA75;
         display: block;
@@ -82,8 +83,9 @@
 
 @media all and (max-width: 900px) {
     .mobileMenu {
-        width: 90%;
-        float: right;
-        margin-top: 25px;
+        position: absolute;
+        top: 81px;
+        left: 2%;
+        width: 95%;
     }
 }

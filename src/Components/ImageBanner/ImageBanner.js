@@ -5,7 +5,7 @@ import './ImageBanner.css'
 class ImageBanner extends React.Component {
     render() {
         return (
-            <div className='imageContainer' style={{backgroundImage: `url(${banner})`}}>
+            <div id='#imageBanner_view' className='imageContainer' style={{backgroundImage: `url(${banner})`}}>
                 <div className='bannerContainer'>
                     <div className='bannerHeading'>
                         <div>NEET Crash Course by MindLearn:</div>

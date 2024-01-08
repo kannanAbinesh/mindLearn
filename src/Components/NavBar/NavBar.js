@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import { FaHamburger, FaCube } from "react-icons/fa";
+import { FaCube } from "react-icons/fa";
 
 /* images */
 import logo from '../../Images/logo.png';
@@ -28,7 +27,7 @@ class NavBar extends React.Component {
                             <img alt='logo' src={logo} className="logo"/>
                         </div>
                         <ul className="navContent">
-                            <div className="link">Home</div>
+                            <div className="link" onClick={() => window.location.href = '#imageBanner_view'}>Home</div>
                             <div className="link" onClick={() => window.location.href = '#aboutUs_view'}>About us</div>
                             <div className="link" onClick={() => window.location.href = '#faculty_view'}>Faculty</div>
                             <div className="link" onClick={() => window.location.href = '#contact_view'}>Contact</div>
