@@ -1,7 +1,8 @@
 import React from 'react';
 import './faculty.css';
 import data from '../../helpers/helper';
-import { Modal } from 'react-bootstrap';
+import { Button, Card, Col, Modal, Row } from 'react-bootstrap';
+import Slider from 'react-slick';
 
 class Faculty extends React.Component {
 
@@ -17,26 +18,62 @@ class Faculty extends React.Component {
     render() {
         const { isOpen, facultyName, id } = this.state;
         let requiredFaculty = data.find((i) => i.id == id);
+        const settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            speed: 3000,
+            arrows: false,
+            dots: false,
+            pauseOnHover: true,
+        };
+
         return (
             <div id='faculty_view'>
                 <div className='facultySubClass'>
                     <h2>Faculty Profile:</h2>
                     <div>Meet our experienced faculty members dedicated to your success.</div>
                 </div>
-                <div>
-                    {
-                        data && data.map((i) => (
-                            <div className='dataFlex'>
-                                <div className='facultyImage'><img src={i.image} alt='profile' /></div>
-                                <div className='flex'>
-                                    <h3 className='nameHeader'>{i.name} - {i.degree}</h3>
-                                    <p className='data'>{i.details}</p>
-                                    <button className='facultyButton' onClick={() => {this.setState({isOpen: true, id: 1, facultyName: i.name})}}>Read more...</button>
-                                </div>
-                            </div>
-                        ))
-                    }
+                <div className='systemView'>
+                    <Row>
+                        {
+                            data && data.map((i) => (
+                                <Col md={4}>
+                                    <Card style={{ width: '25rem' }} className='facaltyCard'>
+                                        <Card.Img variant='top' src={i.image}/>
+                                        <Card.Body>
+                                            <Card.Title>{i.name} - {i.degree}</Card.Title>
+                                            <Card.Text>{i.details}</Card.Text>
+                                            <Button variant='warning' onClick={() => {this.setState({isOpen: true, id: i.id, facultyName: i.name})}}>Read More...</Button>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            ))
+                        }
+                    </Row>
                 </div>
+                <div className='displayCarousel'>
+                    <Slider {...settings}>
+                        {
+                            data?.map((i) => (
+                                <Col>
+                                    <Card style={{ width: '25rem' }} className='facaltyCard'>
+                                        <Card.Img variant='top' src={i.image}/>
+                                        <Card.Body>
+                                            <Card.Title>{i.name} - {i.degree}</Card.Title>
+                                            <Card.Text>{i.details}</Card.Text>
+                                            <Button variant='warning' onClick={() => {this.setState({isOpen: true, id: i.id, facultyName: i.name})}}>Read More...</Button>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            ))
+                        }
+                    </Slider>
+                </div>
+
                 <Modal show={isOpen} onHide={() => this.setState({isOpen: false})}>
                     <Modal.Header closeButton>
                         <Modal.Title className='modalTitle'>{facultyName}</Modal.Title>
@@ -50,7 +87,60 @@ class Faculty extends React.Component {
                             {
                                 requiredFaculty?.details && 
                                 <div className='modalData'>
-                                    <p className='subModalTitle'>Profile Growth:</p> <p>{requiredFaculty?.details}</p>
+                                    <p>{requiredFaculty?.details}</p>
+                                </div>
+                            }
+                            {
+                                requiredFaculty?.academicBackground && 
+                                <div className='modalData'>
+                                    <p className='subModalTitle'>Academic Background:</p> 
+                                    <ul>
+                                        <li>
+                                            <p>{requiredFaculty?.academicBackground?.one}</p>
+                                        </li>
+                                        <li>
+                                            <p>{requiredFaculty?.academicBackground?.two}</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            }
+                            {
+                                requiredFaculty?.professionalExperience && 
+                                <div className='modalData'>
+                                    <p className='subModalTitle'>Professional Experience:</p> 
+                                    <ul>
+                                        <li>
+                                            <p>{requiredFaculty?.professionalExperience?.one}</p>
+                                        </li>
+                                        <li>
+                                            <p>{requiredFaculty?.professionalExperience?.two}</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            }
+                            {
+                                requiredFaculty?.certifications && 
+                                <div className='modalData'>
+                                    <p className='subModalTitle'>Certifications:</p> 
+                                    <ul>
+                                        <li>
+                                            <p>{requiredFaculty?.certifications?.one}</p>
+                                        </li>
+                                        <li>
+                                            <p>{requiredFaculty?.certifications?.two}</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            }
+                            {
+                                requiredFaculty?.professionaleGrowth && 
+                                <div className='modalData'>
+                                    <p className='subModalTitle'>Professional Growth: </p>
+                                    <ul>
+                                        <li>
+                                            {requiredFaculty?.professionaleGrowth?.one}
+                                        </li>
+                                    </ul>
                                 </div>
                             }
                             {
@@ -74,12 +164,23 @@ class Faculty extends React.Component {
                                 </div>
                             }
                             {
-                                requiredFaculty?.research && 
+                                requiredFaculty?.teachingExpertise && 
                                 <div className='modalData'>
-                                    <p className='subModalTitle'>Research Achievements:</p>
+                                    <p className='subModalTitle'>Teaching Expertise: </p>
                                     <ul>
                                         <li>
-                                            <p className='subModalTitle'>Publication: </p><p>{requiredFaculty?.research?.publication}</p>
+                                            {requiredFaculty?.teachingExpertise?.one}
+                                        </li>
+                                    </ul>
+                                </div>
+                            }
+                            {
+                                requiredFaculty?.professionalRoles && 
+                                <div className='modalData'>
+                                    <p className='subModalTitle'>Professional Roles:</p>
+                                    <ul>
+                                        <li>
+                                            {requiredFaculty?.professionalRoles?.one}
                                         </li>
                                     </ul>
                                 </div>
@@ -105,6 +206,49 @@ class Faculty extends React.Component {
                                             </li>
                                         }
                                     </ul>
+                                </div>
+                            }
+                            {
+                                requiredFaculty?.research && 
+                                <div className='modalData'>
+                                    <p className='subModalTitle'>Research Achievements:</p>
+                                    <ul>
+                                        <li>
+                                            <p className='subModalTitle'>Publication: </p><p>{requiredFaculty?.research?.publication}</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            }
+                            {
+                                requiredFaculty?.beyondEducation && 
+                                <div className='modalData'>
+                                    <p className='subModalTitle'>Beyond Education:</p>
+                                    <ul>
+                                        <li>
+                                            {requiredFaculty?.beyondEducation?.one}
+                                        </li>
+                                    </ul>
+                                </div>
+                            }
+                            {
+                                requiredFaculty?.specialNote && 
+                                <div className='modalData'>
+                                    <p className='subModalTitle'>Crack NEET with MindLearn:</p>
+                                    <ul>
+                                        <li>
+                                            {requiredFaculty?.specialNote?.one}
+                                        </li>
+                                        <li>
+                                            {requiredFaculty?.specialNote?.two}
+                                        </li>
+                                    </ul>
+                                </div>
+                            }
+                            {
+                                requiredFaculty?.note && 
+                                <div className='modalData'>
+                                    <hr />
+                                    <p>{requiredFaculty?.note}</p>
                                 </div>
                             }
                         </div>

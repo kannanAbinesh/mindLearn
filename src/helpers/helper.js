@@ -48,7 +48,8 @@ const data = [
         degree: 'PHYSICS / CHEMSITRY',
         image: spoorthi,
         details: `Meet Meera Suresh, a seasoned Physics Teacher with an illustrious career spanning over fifteen years in
-            secondary education. Her teaching methodology goes beyond conventional approaches, ignitin`,
+            secondary education. Her teaching methodology goes beyond conventional approaches, igniting student
+            curiosity through engaging methods and creative learning techniques in the field of physics.`,
         academicBackground: {
             one: `Meera holds a Master's in Philosophy in Physics with specialization in Advanced Material Sciences.`,
             two: `She also possesses a Master's degree in Solid State Physics, showcasing her expertise in the
@@ -76,8 +77,8 @@ const data = [
             one: `Meera believes in constantly evolving as an educator. Her teaching philosophy is centered around
                 creating an environment that not only imparts knowledge but also fosters critical thinking and curiosity
                 among students.`,
-                two: `Beyond academics, Meera is passionate about shaping the future of education, and her career
-                    stands as a testament to her dedication to excellence in teaching and leadership.`
+            two: `Beyond academics, Meera is passionate about shaping the future of education, and her career
+                stands as a testament to her dedication to excellence in teaching and leadership.`
         },
         note: `Join us at MindLearn to benefit from Meera Suresh's wealth of experience and expertise, and
             embark on a journey of academic excellence under her guidance.`

@@ -16,10 +16,10 @@ class Home extends React.Component {
                 <NavBar />
                 <ImageBanner />
                 <AboutUs />
-                <WhyUs />
+                {/* <WhyUs /> */}
                 <Faculty />
                 <Register />
-                <Contact />
+                {/* <Contact /> */}
                 <Footer />
             </div>
         )
