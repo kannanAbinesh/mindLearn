@@ -19,14 +19,14 @@ class Register extends React.Component {
             publicKey: 'AQtrnsSaf7RNbAx3N',
             templateId: 'template_15kx2rk',
             serviceId: 'service_0lqclb5',
-            errorMessage: ''
+            errorMessage: '',
         };
     };
 
     handleSubmit = () => {
         const { userName, phoneNumber, emailId, publicKey, templateId, serviceId } = this.state;
         let regEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        console.log(regEx.test(emailId))
+
         if(!userName || !phoneNumber || !emailId) {
             this.setState({isError: true, errorMessage: 'please fill all the required fields', userName: '', emailId: '', phoneNumber: ''});
             return '';
@@ -66,7 +66,7 @@ class Register extends React.Component {
                 <h2 className='registerHeader'>Don't Miss This Opportunity!</h2>
                 <p className='registerHeader'>Secure your seat toaday for the ultimate NEET crash course experience!<br />Register now at</p>
                 <button className='buttonContainerTwo'>MindLearn NEET Crash Course.</button>
-                <Modal show={this.state.isOpen} onHide={() => this.setState({isOpen: false})}>
+                <Modal show={this.state.isOpen} onHide={() => this.setState({isOpen: false, emailId: '', userName: '', phoneNumber: '', errorMessage: '', isError: false})} centered aria-labelledby="contained-modal-title-vcenter">
                     <Modal.Header closeButton>
                         <Modal.Title>Register Here</Modal.Title>
                     </Modal.Header>
