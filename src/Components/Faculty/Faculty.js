@@ -25,7 +25,7 @@ class Faculty extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            speed: 3000,
+            speed: 10000,
             arrows: false,
             dots: false,
             pauseOnHover: true,
