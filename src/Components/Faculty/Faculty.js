@@ -28,7 +28,7 @@ class Faculty extends React.Component {
             speed: 3000,
             arrows: false,
             dots: false,
-            pauseOnHover: true,
+            pauseOnHover: false,
         };
 
         return (
