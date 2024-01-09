@@ -17,7 +17,7 @@ class Home extends React.Component {
                 <ImageBanner />
                 <AboutUs />
                 {/* <WhyUs /> */}
-                <Faculty />
+                {/* <Faculty /> */}
                 <Register />
                 {/* <Contact /> */}
                 <Footer />
