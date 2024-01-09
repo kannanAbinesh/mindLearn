@@ -25,7 +25,7 @@ class Faculty extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            speed: 10000,
+            speed: 3000,
             arrows: false,
             dots: false,
             pauseOnHover: true,
@@ -60,7 +60,7 @@ class Faculty extends React.Component {
                         {
                             data?.map((i) => (
                                 <Col>
-                                    <Card style={{ width: '25rem' }} className='facaltyCard'>
+                                    <Card style={{ width: 'auto' }} className='facaltyCard'>
                                         <Card.Img variant='top' src={i.image}/>
                                         <Card.Body>
                                             <Card.Title>{i.name} - {i.degree}</Card.Title>
