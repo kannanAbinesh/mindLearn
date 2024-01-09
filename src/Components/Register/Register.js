@@ -36,7 +36,7 @@ class Register extends React.Component {
         } else if(!regEx.test(emailId)) {
             this.setState({isError: true, errorMessage: 'Please enter valid mailId', userName: '', emailId: '', phoneNumber: ''});
             return '';
-        } else if (!Number(phoneNumber) || phoneNumber.length == 10) {
+        } else if (!Number(phoneNumber) || !phoneNumber.length == 10) {
             this.setState({isError: true, errorMessage: 'Please enter valid mobile number', userName: '', emailId: '', phoneNumber: ''});
             return '';
         }
