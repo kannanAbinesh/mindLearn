@@ -52,7 +52,7 @@ class NavBar extends React.Component {
                     isOpen 
                     ?
                     <div className="mobileMenu">
-                        <div className="link" onClick={() => window.location.href = '#imageBanner_view'}>Home</div>
+                        <div className="link">Home</div>
                         <div className="link" onClick={() => window.location.href = '#aboutUs_view'}>About us</div>
                         <div className="link" onClick={() => window.location.href = '#faculty_view'}>Faculty</div>
                         <div className="link" onClick={() => window.location.href = '#contact_view'}>Contact</div>

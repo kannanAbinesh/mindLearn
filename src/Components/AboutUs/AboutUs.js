@@ -6,7 +6,7 @@ import banner from '../../Images/secondDivision.png';
 class AboutUs extends React.Component {
     render() {
         return (
-            <div id="aboutUs_view">
+            <div id='aboutUs_view'>
                 <div className="mainContainer">
                     <div className="firstContainer">
                         <div className="heading">About Us: MindLearn</div>

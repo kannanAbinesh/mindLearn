@@ -9,7 +9,7 @@
 }
 
 .bannerContainer {
-    width: 50%;
+    width: 60%;
     padding: 100px;
 }
 
@@ -57,7 +57,7 @@
     .bannerHeading {
         color: #FFC300;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 22px;
         font-family: serif;
     }
 

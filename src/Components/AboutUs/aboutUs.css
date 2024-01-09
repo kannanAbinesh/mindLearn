@@ -31,34 +31,40 @@
 }
 
 .innnerImageContainers {
-    /* display: none; */
+    display: none;
 }
 
 @media all and (max-width: 1100px) {
+    .secondContainer {
+        width: 50%;
+        margin: auto;
+    }
+    
     .heading {
         font-weight: bold;
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .mainContents {
         padding-top: 15px;
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 780px) {
     .heading {
         font-weight: bold;
-        font-size: 12px;
+        font-size: 20px;
+    }
+
+    .firstContainer {
+        width: 100%;
     }
 
     .mainContents {
-        font-size: 10px;
-        padding-top: 10px;
+        font-size: 16px;
     }
-}
 
-@media all and (max-width: 580px) {
     .imageContainers {
         display: none;
     }
