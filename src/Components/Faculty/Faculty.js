@@ -83,7 +83,7 @@ class Faculty extends React.Component {
                     </Row>
                 </div>
                 <div className='displayCarousel'>
-                    <Slider {...settings}>
+                    <Slider {...settings} style={{margin: '50px'}}>
                         {
                             data?.map((i) => (
                                 <Col>
