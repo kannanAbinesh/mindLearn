@@ -11,9 +11,16 @@ class Faculty extends React.Component {
         this.state = {
             isOpen: false,
             id: '',
-            facultyName: ''
+            facultyName: '',
+            autoplay: false
         }
     };
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({autoplay: true})
+        }, 5000)
+    }
 
     render() {
         const { isOpen, facultyName, id } = this.state;
@@ -29,6 +36,26 @@ class Faculty extends React.Component {
             arrows: false,
             dots: false,
             pauseOnHover: false,
+            responsive: [
+                {
+                    breakpoint: 850,
+                    settings: {
+                        slidesToScroll: 1,
+                        slidesToShow: 2,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 750,
+                    settings: {
+                        slidesToScroll: 1,
+                        slidesToShow: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                }
+            ]
         };
 
         return (
@@ -42,11 +69,11 @@ class Faculty extends React.Component {
                         {
                             data && data.map((i) => (
                                 <Col md={4}>
-                                    <Card style={{ width: '25rem' }} className='facaltyCard'>
+                                    <Card style={{ width: '100%'}} className='facaltyCard'>
                                         <Card.Img variant='top' src={i.image}/>
                                         <Card.Body>
-                                            <Card.Title>{i.name} - {i.degree}</Card.Title>
-                                            <Card.Text>{i.details}</Card.Text>
+                                            <Card.Title style={{height: '3rem'}}>{i.name} - {i.degree}</Card.Title>
+                                            <Card.Text className='textContainers'>{i.details}</Card.Text>
                                             <Button variant='warning' onClick={() => {this.setState({isOpen: true, id: i.id, facultyName: i.name})}}>Read More...</Button>
                                         </Card.Body>
                                     </Card>
@@ -60,11 +87,11 @@ class Faculty extends React.Component {
                         {
                             data?.map((i) => (
                                 <Col>
-                                    <Card style={{ width: 'auto' }} className='facaltyCard'>
+                                    <Card style={{ width: '100%'}} className='facaltyCard'>
                                         <Card.Img variant='top' src={i.image}/>
                                         <Card.Body>
-                                            <Card.Title>{i.name} - {i.degree}</Card.Title>
-                                            <Card.Text>{i.details}</Card.Text>
+                                            <Card.Title style={{height: '3rem'}}>{i.name} - {i.degree}</Card.Title>
+                                            <Card.Text className='textContainers'>{i.details}</Card.Text>
                                             <Button variant='warning' onClick={() => {this.setState({isOpen: true, id: i.id, facultyName: i.name})}}>Read More...</Button>
                                         </Card.Body>
                                     </Card>
