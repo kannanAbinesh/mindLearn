@@ -21,8 +21,29 @@ class NavBar extends React.Component {
     render() {
         const { isOpen } = this.state;
         return (
-            <div>
-                <nav className="navBar">
+            <div >
+                <header>
+                    <nav className="navContainer">
+                        <div className="logoContainer">
+                            <img src={logo} alt="logo" className="logo"/>
+                        </div>
+                        <div>
+                            {
+                                !isOpen ? 
+                                <IoMdMenu className="menuIcon" onClick={() => {this.setState({isOpen: !this.state.isOpen}); document.getElementsByClassName('navContent')[0].style.display = 'block'}} />
+                                :
+                                <MdOutlineCancel className="menuIcon" onClick={() =>  {this.setState({isOpen: !this.state.isOpen}); document.getElementsByClassName('navContent')[0].style.display = 'none'}} />
+                            }
+                        </div>
+                        <ul className="navContent">
+                            <p className="link">Home</p>
+                            <p className="link">About us</p>
+                            <p className="link">Faculty</p>
+                            <p className="link">Contact</p>
+                        </ul>
+                    </nav>
+                </header>
+                {/* <nav className="navBar">
                     <div className="navDiv">
                         <div className="logoContainer">
                             <img alt='logo' src={logo} className="logo"/>
@@ -59,7 +80,7 @@ class NavBar extends React.Component {
                     </div>
                     :
                     null
-                }   
+                }    */}
             </div>
         )
     }

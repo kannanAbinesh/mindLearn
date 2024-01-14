@@ -14,13 +14,13 @@ class Home extends React.Component {
         return (
             <div>
                 <NavBar />
-                <ImageBanner />
-                <AboutUs />
+                {/* <ImageBanner />
+                <AboutUs /> */}
                 {/* <WhyUs /> */}
-                <Faculty />
-                <Register />
+                {/* <Faculty />
+                <Register /> */}
                 {/* <Contact /> */}
-                <Footer />
+                {/* <Footer /> */}
             </div>
         )
     }
