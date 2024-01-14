@@ -30,9 +30,9 @@ class NavBar extends React.Component {
                         <div>
                             {
                                 !isOpen ? 
-                                <IoMdMenu className="menuIcon" onClick={() => {this.setState({isOpen: !this.state.isOpen}); document.getElementsByClassName('navContent')[0].style.display = 'block'}} />
+                                <IoMdMenu size={75} className="menuIcon" onClick={() => {this.setState({isOpen: !this.state.isOpen}); document.getElementsByClassName('navContent')[0].style.display = 'block'}} />
                                 :
-                                <MdOutlineCancel className="menuIcon" onClick={() =>  {this.setState({isOpen: !this.state.isOpen}); document.getElementsByClassName('navContent')[0].style.display = 'none'}} />
+                                <MdOutlineCancel size={75} className="menuIcon" onClick={() =>  {this.setState({isOpen: !this.state.isOpen}); document.getElementsByClassName('navContent')[0].style.display = 'none'}} />
                             }
                         </div>
                         <ul className="navContent">
